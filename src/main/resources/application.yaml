@@ -1,0 +1,25 @@
+spring:
+  web:
+    resources:
+      app-mappings: false
+  main:
+    banner-mode: off
+  sql:
+    init:
+      platform: postgres
+      mode: always
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 2
+      max-lifetime: 1800000
+      pool-name: hikari-cp
+      connection-timeout: 30000
+      idle-timeout: 30000
+      keepalive-time: 1
+      register-mbeans: true
+
+http:
+  rest:
+    testing-url: https://httpbin.org

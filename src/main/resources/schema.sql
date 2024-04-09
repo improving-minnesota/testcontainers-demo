@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS widget
+(
+    id      SERIAL PRIMARY KEY,
+    value   VARCHAR(255)
+);
